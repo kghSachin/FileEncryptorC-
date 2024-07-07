@@ -21,6 +21,7 @@ struct Task
     {
         std::ostringstream oss;
         oss << filePath << ',' << (action == Action::ENCRYPT ? "ENCRYPT" : "DECRYPT");
+        return oss.str();
     }
     static Task fromString(std::string &taskData)
     {
